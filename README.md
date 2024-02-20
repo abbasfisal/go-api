@@ -1,2 +1,1 @@
-# go-api
-simple crud rest api with golang 
+# Build a RESTful CRUD API with Golang no framework
