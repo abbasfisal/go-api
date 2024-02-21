@@ -4,6 +4,7 @@ import (
 	"database/sql"
 	"fmt"
 	"github.com/abbasfisal/go-api/helper"
+	_ "github.com/lib/pq" //posgres driver
 	"github.com/rs/zerolog/log"
 )
 
