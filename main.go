@@ -12,8 +12,13 @@ func main() {
 
 	router := httprouter.New()
 	router.GET("/ping", pingHandler)
+	router.GET("/", homeHandler)
 
 	helper.PanicIfError(http.ListenAndServe("localhost:8080", router))
+}
+
+func homeHandler(w http.ResponseWriter, r *http.Request, params httprouter.Params) {
+	fmt.Fprintf(w, "welcome to Home Page")
 }
 
 func pingHandler(w http.ResponseWriter, r *http.Request, params httprouter.Params) {
